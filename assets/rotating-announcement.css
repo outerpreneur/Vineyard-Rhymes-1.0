@@ -1,0 +1,14 @@
+.rotating-announcement {
+  width: 100%;
+  padding: 10px 0;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+}
+
+.announcement-container {
+  background-color: red;
+  width: 300px;
+}

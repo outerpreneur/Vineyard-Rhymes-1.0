@@ -1,0 +1,26 @@
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "header": {
+      "type": "rotating-announcement",
+      "settings": {
+        "announcements": [
+          {
+            "text": "Welcome to the new website!",
+            "link": "/welcome"
+          },
+          {
+            "text": "Check out our new products!",
+            "link": "/products"
+          },
+          {
+            "text": "Get 10% off your first order!",
+            "link": "/discount"
+          }
+        ]
+      }
+    }
+  },
+  "order": ["header"]
+}
