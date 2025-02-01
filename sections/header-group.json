@@ -1,26 +1,51 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "header",
   "name": "Header Group",
   "sections": {
     "header": {
       "type": "rotating-announcement",
-      "settings": {
-        "announcements": [
-          {
-            "text": "Welcome to the new website!",
-            "link": "/welcome"
-          },
-          {
-            "text": "Check out our new products!",
-            "link": "/products"
-          },
-          {
-            "text": "Get 10% off your first order!",
-            "link": "/discount"
+      "blocks": {
+        "announcement_nKWbBM": {
+          "type": "announcement",
+          "settings": {
+            "title": "The Winter Warm-Up! ALL Sale Styles Are Up To 60% Off With Code: DEFROST | Shop Now—Details"
           }
-        ]
+        },
+        "announcement_6TY8wW": {
+          "type": "announcement",
+          "settings": {
+            "title": "Shop New Sale Styles & Lower Prices—Save Even More! Shop Now"
+          }
+        },
+        "announcement_dNXKaJ": {
+          "type": "announcement",
+          "settings": {
+            "title": "Spring Preview: New Arrivals! Shop Now"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_nKWbBM",
+        "announcement_6TY8wW",
+        "announcement_dNXKaJ"
+      ],
+      "settings": {
+        "title": "Announcement",
+        "background_color": "#001a43",
+        "text_color": "#ffffff"
       }
     }
   },
-  "order": ["header"]
+  "order": [
+    "header"
+  ]
 }
