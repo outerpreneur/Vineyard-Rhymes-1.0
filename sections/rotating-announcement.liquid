@@ -16,10 +16,6 @@
         </div>
       </div>
     {% endfor %}
-    {% comment %}
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-    {% endcomment %}
   </div>
 </div>
 
@@ -29,6 +25,17 @@
     color: {{ section.settings.text_color }};
   }
 {% endstyle %}
+
+{% javascript %}
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    autoplay: {
+      delay: 5000,
+    },
+  });
+{% endjavascript %}
 
 {% schema %}
 {
