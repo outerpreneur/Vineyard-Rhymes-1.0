@@ -1,13 +1,25 @@
 .rotating-announcement {
   width: 100%;
-  padding: 10px 0;
+  padding: 10px 20px;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 700;
 }
 
 .announcement {
-  width: 500px;
+  max-width: 700px;
   margin: 0 auto;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .rotating-announcement {
+    padding: 8px 0;
+    font-size: 9px;
+  }
+
+  .announcement {
+    max-width: 100%;
+    padding: 5px 10px;
+  }
 }

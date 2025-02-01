@@ -3,12 +3,8 @@
 <link rel="stylesheet" href="{{ 'rotating-announcement.css' | asset_url }}">
 <link rel="stylesheet" href="{{ 'swiper.css' | asset_url }}">
 
-<!-- Slider main container -->
 <div class="rotating-announcement-{{ section.id }} rotating-announcement swiper">
-  <!-- Additional required wrapper -->
   <div class="announcement-container swiper-wrapper">
-    <!-- Slides -->
-
     {% for block in section.blocks %}
       <div class="swiper-slide">
         <div class="announcement">
