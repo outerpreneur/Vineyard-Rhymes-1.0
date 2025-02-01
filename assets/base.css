@@ -1,3 +1,26 @@
+/* Utilities */
+
+.container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 924px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 850px) {
+  .container {
+    max-width: 800px;
+    padding: 0 10px;
+  }
+}
+
 /* reset */
 
 html,

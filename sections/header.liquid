@@ -1,27 +1,70 @@
+<link rel="stylesheet" href="{{ 'header.css' | asset_url }}">
+
 <header>
   <div class="container">
     <div class="row">
       {% comment %} Column 1 {% endcomment %}
-      <div class="col-12">
-        <h1>{{ shop.name }}</h1>
+      <div class="shop-name shop-logo">
+        {% if section.settings.logo %}
+          <img
+            src="{{ section.settings.logo | image_url }}"
+            width="{{ section.settings.logo_width }}"
+            height=""
+            alt="{{ shop.name }}"
+          >
+        {% else %}
+          <h1>{{ shop.name | capitalize | replace: '-', ' ' }}</h1>
+        {% endif %}
       </div>
       {% comment %} Column 2 {% endcomment %}
       <div>
-        <nav>
+        <nav class="main-nav-menu">
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/collections/all">Shop</a></li>
-            <li><a href="/pages/about">About</a></li>
-            <li><a href="/pages/contact">Contact</a></li>
+            {% for link in linklists['main-menu'].links %}
+              <li>
+                {% if link.title == 'Sale' %}
+                  <a class="main-nav-menu-link-sale" href="{{ link.url }}">{{ link.title }}</a>
+                {% else %}
+                  <a class="main-nav-menu-link" href="{{ link.url }}">{{ link.title }}</a>
+                {% endif %}
+              </li>
+            {% endfor %}
           </ul>
         </nav>
       </div>
       {% comment %} Column 3 {% endcomment %}
-      <div>
+      <div class="menu-icons">
+        <a href="/search">
+          {% render 'search.svg' %}
+        </a>
         <a href="/cart">
-          <img src="{{ 'cart.png' | asset_url }}" alt="Cart">
+          {% render 'shoppingbag.svg' %}
         </a>
       </div>
     </div>
   </div>
 </header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo",
+      "info": "Recommended size: 200x200px"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "label": "Logo Width",
+      "default": 200,
+      "min": 50,
+      "max": 250,
+      "step": 10,
+      "unit": "px"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,38 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.main-nav-menu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  min-width: 300px;
+}
+
+.main-nav-menu ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.main-nav-menu ul li a {
+  text-decoration: none;
+  color: #001a43;
+  text-transform: uppercase;
+}
+
+.main-nav-menu ul:hover li a {
+  color: gray;
+}
+
+.main-nav-menu ul li a:hover {
+  color: #001a43;
+}
+
+.main-nav-menu-link-sale {
+  color: red !important;
+}
