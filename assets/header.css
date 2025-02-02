@@ -36,3 +36,10 @@
 .main-nav-menu-link-sale {
   color: red !important;
 }
+
+/* Menu icons */
+
+.menu-icons a {
+  text-decoration: none;
+  color: #001a43;
+}

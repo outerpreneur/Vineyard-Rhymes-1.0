@@ -6,5 +6,62 @@
     "theme_author": "Aleksander Tysklind",
     "theme_documentation_url": "https://outerpreneur.com",
     "theme_support_url": "https://outerpreneur.com"
+  },
+  {
+    "name": "colors",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Primary colors"
+      },
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#f8f8f8"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color",
+        "default": "#333333"
+      },
+      {
+        "type": "color",
+        "id": "link_color",
+        "label": "Link Color",
+        "default": "#0077cc"
+      },
+      {
+        "type": "color",
+        "id": "link_hover_color",
+        "label": "Link Hover Color",
+        "default": "#005580"
+      },
+      {
+        "type": "color",
+        "id": "button_color",
+        "label": "Button Color",
+        "default": "#0077cc"
+      },
+      {
+        "type": "color",
+        "id": "button_text_color",
+        "label": "Button Text Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "button_hover_color",
+        "label": "Button Hover Color",
+        "default": "#005580"
+      },
+      {
+        "type": "color",
+        "id": "button_hover_text_color",
+        "label": "Button Hover Text Color",
+        "default": "#ffffff"
+      }
+    ]
   }
 ]

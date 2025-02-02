@@ -35,10 +35,16 @@
       {% comment %} Column 3 {% endcomment %}
       <div class="menu-icons">
         <a href="/search">
-          {% render 'search.svg' %}
+          {% render 'search' %}
+        </a>
+        <a href="/account">
+          {% render 'user' %}
+        </a>
+        <a href="/wishlist">
+          {% render 'heart' %}
         </a>
         <a href="/cart">
-          {% render 'shoppingbag.svg' %}
+          {% render 'cart' %}
         </a>
       </div>
     </div>
@@ -68,3 +74,33 @@
   ]
 }
 {% endschema %}
+
+{% comment %}
+  {% for link in linklists['main-menu'].links %}
+    {% assign child_list_handle = link.title | handleize %}
+    {% if linklists[child_list_handle].links != blank %}
+      <a href="{{ link.url }}">{{ link.title }}</a>
+      [
+      {%- for childlink in linklists[child_list_handle].links %}
+        <a href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+      {% endfor -%}
+      ]
+    {% else %}
+      <a href="{{ link.url }}">{{ link.title }}</a>
+    {% endif %}
+  {% endfor %}
+{% endcomment %}
+
+{% comment %}
+  <a href="/cart">cart</a>
+
+  {% if shop.customer_accounts_enabled %}
+    {% if customer %}
+      <a href="/account">account</a>
+      {{ 'log out' | customer_logout_link }}
+    {% else %}
+      {{ 'log in ' | customer_login_link }}
+      {{ 'register' | customer_register_link }}
+    {% endif %}
+  {% endif %}
+{% endcomment %}
