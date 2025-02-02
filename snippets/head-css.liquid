@@ -1,10 +1,14 @@
 {% comment %} Global dynamic styles {% endcomment %}
 
 {% style %}
-  body {
-      font-family: {{ settings.font_family }};
-      font-size: {{ settings.font_size }};
-      color: {{ settings.text_color }};
-      background-color: {{ settings.background_color }};
-  }
+  {{ settings.navigation_font | font_face: font_display: 'swap' }}
+
+    :root {
+        --font-family: {{ settings.font_family }};
+        --font-size: {{ settings.font_size }};
+        --text-color: {{ settings.text_color }};
+        --background-color: {{ settings.background_color }};
+        --header-background-color: {{ settings.header_background_color }};
+        --navigation-font: {{ settings.navigation_font.family }};
+    }
 {% endstyle %}

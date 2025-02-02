@@ -61,6 +61,193 @@
         "id": "button_hover_text_color",
         "label": "Button Hover Text Color",
         "default": "#ffffff"
+      },
+      {
+        "type": "header",
+        "content": "Header colors"
+      },
+      {
+        "type": "color",
+        "id": "header_background_color",
+        "label": "Header Background Color",
+        "default": "#bddcd2"
+      },
+      {
+        "type": "color",
+        "id": "header_text_color",
+        "label": "Header Text Color",
+        "default": "#333333"
+      },
+      {
+        "type": "color",
+        "id": "header_link_color",
+        "label": "Header Link Color",
+        "default": "#0077cc"
+      },
+      {
+        "type": "color",
+        "id": "header_link_hover_color",
+        "label": "Header Link Hover Color",
+        "default": "#005580"
+      },
+      {
+        "type": "header",
+        "content": "Footer colors"
+      },
+      {
+        "type": "color",
+        "id": "footer_background_color",
+        "label": "Footer Background Color",
+        "default": "#f8f8f8"
+      },
+      {
+        "type": "color",
+        "id": "footer_text_color",
+        "label": "Footer Text Color",
+        "default": "#333333"
+      },
+      {
+        "type": "color",
+        "id": "footer_link_color",
+        "label": "Footer Link Color",
+        "default": "#0077cc"
+      },
+      {
+        "type": "color",
+        "id": "footer_link_hover_color",
+        "label": "Footer Link Hover Color",
+        "default": "#005580"
+      }
+    ]
+  },
+  {
+    "name": "typography",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Global typography"
+      },
+      {
+        "type": "header",
+        "content": "navigation typography"
+      },
+      {
+        "type": "font_picker",
+        "id": "navigation_font",
+        "label": "Navigation Font",
+        "default": "aleo_n4",
+        "info": "Select a font for your navigation."
+      },
+      {
+        "type": "range",
+        "id": "navigation_font_size",
+        "label": "Navigation Font Size",
+        "default": 16,
+        "min": 12,
+        "max": 24,
+        "step": 1,
+        "info": "Set the font size for your navigation."
+      },
+      {
+        "type": "color",
+        "id": "navigation_color",
+        "label": "Navigation Color",
+        "default": "#333333",
+        "info": "Set the color for your navigation."
+      },
+      {
+        "type": "header",
+        "content": "Heading typography"
+      },
+      {
+        "type": "font_picker",
+        "id": "heading_font",
+        "label": "Heading Font",
+        "default": "aleo_n4",
+        "info": "Select a font for your headings."
+      },
+      {
+        "type": "range",
+        "id": "heading_font_size",
+        "label": "Heading Font Size",
+        "default": 24,
+        "min": 12,
+        "max": 36,
+        "step": 1,
+        "info": "Set the font size for your headings."
+      },
+      {
+        "type": "color",
+        "id": "heading_color",
+        "label": "Heading Color",
+        "default": "#333333",
+        "info": "Set the color for your headings."
+      },
+      {
+        "type": "header",
+        "content": "Body typography"
+      },
+      {
+        "type": "font_picker",
+        "id": "body_font",
+        "label": "Body Font",
+        "default": "aleo_n4",
+        "info": "Select a font for your body text."
+      },
+      {
+        "type": "range",
+        "id": "body_font_size",
+        "label": "Body Font Size",
+        "default": 16,
+        "min": 12,
+        "max": 24,
+        "step": 1,
+        "info": "Set the font size for your body text."
+      },
+      {
+        "type": "color",
+        "id": "body_color",
+        "label": "Body Color",
+        "default": "#333333",
+        "info": "Set the color for your body text."
+      }
+    ]
+  },
+  {
+    "name": "header",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Header"
+      },
+      {
+        "type": "image_picker",
+        "id": "header_logo",
+        "label": "Header Logo",
+        "info": "Upload a logo for your theme."
+      },
+      {
+        "type": "text",
+        "id": "header_text",
+        "label": "Header Text",
+        "default": "Vineyard Rhymes",
+        "info": "Enter the text for your header."
+      }
+    ]
+  },
+  {
+    "name": "footer",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Footer"
+      },
+      {
+        "type": "text",
+        "id": "footer_text",
+        "label": "Footer Text",
+        "default": "© 2021 Vineyard Rhymes. All rights reserved.",
+        "info": "Enter the text for your footer."
       }
     ]
   }

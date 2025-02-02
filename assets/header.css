@@ -1,3 +1,7 @@
+header {
+  background-color: var(--header-background-color);
+}
+
 .row {
   display: flex;
   justify-content: space-between;
@@ -20,6 +24,7 @@
 }
 
 .main-nav-menu ul li a {
+  font-family: var(--navigation-font) !important;
   text-decoration: none;
   color: #001a43;
   text-transform: uppercase;
@@ -34,6 +39,7 @@
 }
 
 .main-nav-menu-link-sale {
+  font-family: var(--navigation-font) !important;
   color: red !important;
 }
 

@@ -147,3 +147,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/* Global styles */
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}

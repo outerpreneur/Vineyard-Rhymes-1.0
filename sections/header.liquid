@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="{{ 'header.css' | asset_url }}">
-
+{% comment %} {% include 'head-css' %} {% endcomment %}
 <header>
   <div class="container">
     <div class="row">
@@ -25,7 +25,7 @@
                 {% if link.title == 'Sale' %}
                   <a class="main-nav-menu-link-sale" href="{{ link.url }}">{{ link.title }}</a>
                 {% else %}
-                  <a class="main-nav-menu-link" href="{{ link.url }}">{{ link.title }}</a>
+                  <a style="font-family: ;" class="main-nav-menu-link" href="{{ link.url }}">{{ link.title }}</a>
                 {% endif %}
               </li>
             {% endfor %}
