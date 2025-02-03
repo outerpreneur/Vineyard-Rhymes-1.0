@@ -1,6 +1,7 @@
 {% comment %} Global dynamic styles {% endcomment %}
 {% style %}
   {{ settings.navigation_font | font_face: font_display: 'swap' }}
+  {{ settings.body_font | font_face: font_display: 'swap' }}
 
     :root {
         /* header colors */
@@ -16,7 +17,7 @@
         --text-color: {{ settings.text_color }};
         --background-color: {{ settings.background_color }};
         /* body font */
-        --font-family: {{ settings.font_family }};
+        --body-font: {{ settings.body_font }};
         --font-size: {{ settings.font_size }};
     }
 {% endstyle %}

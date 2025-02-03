@@ -1,9 +1,10 @@
+{% render 'head-css' %}
 <script src="{{ 'rotating-announcement.js' | asset_url }}" defer></script>
 <script src="{{ 'swiper.js' | asset_url }}"></script>
 <link rel="stylesheet" href="{{ 'rotating-announcement.css' | asset_url }}">
 <link rel="stylesheet" href="{{ 'swiper.css' | asset_url }}">
 
-<div class="rotating-announcement-{{ section.id }} rotating-announcement swiper">
+<div class="rotating-announcement swiper">
   <div class="announcement-container swiper-wrapper">
     {% for block in section.blocks %}
       <div class="swiper-slide">
@@ -16,7 +17,7 @@
 </div>
 
 {% style %}
-  .rotating-announcement-{{ section.id }} {
+  #shopify-section-{{ section.id }} .rotating-announcement {
     background-color: {{ section.settings.background_color }};
     color: {{ section.settings.text_color }};
   }
