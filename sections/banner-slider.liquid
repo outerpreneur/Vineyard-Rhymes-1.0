@@ -1,0 +1,110 @@
+<script src="{{ 'swiper.js' | asset_url }}"></script>
+<link rel="stylesheet" href="{{ 'swiper.css' | asset_url }}">
+
+<section id="shopify-section-{{ section.id}}" class="shopify-section banner-slider">
+  <div class="swiper-container swiper">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="swiper-slide">
+          <a href="{{ block.settings.slider_link }}">
+            <img
+              src="{{ block.settings.slider_image | image_url }}"
+              width="300px"
+              height=""
+              loading="lazy"
+              alt="banner-1"
+            >
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-pagination"></div>
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+{% style %}
+  #shopify-section-{{ section.id }} .banner-slider {
+      padding-top: 5px;
+      height: 700px;
+      width: 100%;
+      object-fit: cover;
+      position: relative;
+  }
+
+  #shopify-section-{{ section.id }} .swiper-container {
+      width: 100%;
+      height: 100%;
+  }
+
+  #shopify-section-{{ section.id }} .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  #shopify-section-{{ section.id }} .swiper-pagination {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+{% endstyle %}
+
+{% javascript %}
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    autoplay: {
+      delay: 5000,
+    },
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Banner Slider",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "banner",
+      "name": "Banner",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "slider_image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Alt Text"
+        },
+        {
+          "type": "url",
+          "id": "slider_link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner Slider"
+    }
+  ]
+}
+{% endschema %}
