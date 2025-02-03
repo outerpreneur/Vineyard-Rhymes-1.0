@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{ 'header.css' | asset_url }}">
 {% comment %} {% include 'head-css' %} {% endcomment %}
 <header>
-  <div class="container">
+  <div class="page-width">
     <div class="row">
       {% comment %} mobile menu {% endcomment %}
       <div class="mobile-menu-icon-section">
@@ -9,16 +9,18 @@
       </div>
       {% comment %} Column 1 {% endcomment %}
       <div class="shop-logo-section shop-name ">
-        {% if section.settings.logo %}
-          <img
-            src="{{ section.settings.logo | image_url }}"
-            width="{{ section.settings.logo_width }}"
-            height=""
-            alt="{{ shop.name }}"
-          >
-        {% else %}
-          <h1>{{ shop.name | capitalize | replace: '-', ' ' }}</h1>
-        {% endif %}
+        <a href="/">
+          {% if section.settings.logo %}
+            <img
+              src="{{ section.settings.logo | image_url }}"
+              width="{{ section.settings.logo_width }}"
+              height=""
+              alt="{{ shop.name }}"
+            >
+          {% else %}
+            <h1>{{ shop.name | capitalize | replace: '-', ' ' }}</h1>
+          {% endif %}
+        </a>
       </div>
       {% comment %} Column 2 {% endcomment %}
       <div class="main-nav-menu-section">

@@ -1,0 +1,78 @@
+<section id="shopify-section-{{ section.id }}" class="shopify-section featured-collection-list">
+  <div class="container">
+    <div class="collection__list">
+      {% for block in section.blocks %}
+        <a class="collection__link" href="{{ block.settings.featured_collection.url }}">
+          <h2 class="collection__title">{{ block.settings.featured_collection.title }}</h2>
+        </a>
+      {% endfor %}
+    </div>
+    <h3>
+      {{ section.settings.subtitle }}
+    </h3>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Collection List",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "It’s only blue skies and comfortable styles in our latest batch of new arrivals."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "collection",
+          "id": "featured_collection",
+          "label": "Collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Collection List"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+  .shopify-section.featured-collection-list {
+    padding: 50px 0;
+  }
+
+  .shopify-section.featured-collection-list .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .shopify-section.featured-collection-list .collection__list {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .shopify-section.featured-collection-list .container .collection__link {
+    text-decoration: none;
+  }
+
+  .shopify-section.featured-collection-list .container .collection__title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: ;
+  }
+{% endstylesheet %}

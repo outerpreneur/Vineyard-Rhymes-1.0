@@ -1,6 +1,6 @@
 /* Utilities */
 
-.container {
+.page-width {
   width: 100%;
   max-width: 1500px;
   margin: 0 auto;
@@ -19,20 +19,20 @@ body {
 /* responsive styles */
 
 @media (max-width: 1024px) {
-  .container {
+  .page-width {
     max-width: 924px;
     padding: 0 10px;
   }
 }
 
 @media (max-width: 850px) {
-  .container {
+  .page-width {
     max-width: 800px;
     padding: 0 10px;
   }
 }
 @media (max-width: 600px) {
-  .container {
+  .page-width {
     max-width: 370px;
     padding: 5px 0;
   }
