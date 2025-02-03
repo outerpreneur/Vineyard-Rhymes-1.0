@@ -3,8 +3,12 @@
 <header>
   <div class="container">
     <div class="row">
+      {% comment %} mobile menu {% endcomment %}
+      <div class="mobile-menu-icon-section">
+        {% render 'menu' %}
+      </div>
       {% comment %} Column 1 {% endcomment %}
-      <div class="shop-name shop-logo">
+      <div class="shop-logo-section shop-name ">
         {% if section.settings.logo %}
           <img
             src="{{ section.settings.logo | image_url }}"
@@ -17,7 +21,7 @@
         {% endif %}
       </div>
       {% comment %} Column 2 {% endcomment %}
-      <div>
+      <div class="main-nav-menu-section">
         <nav class="main-nav-menu">
           <ul>
             {% for link in linklists['main-menu'].links %}
@@ -33,17 +37,17 @@
         </nav>
       </div>
       {% comment %} Column 3 {% endcomment %}
-      <div class="menu-icons">
-        <a href="/search">
+      <div class="menu-icons-section">
+        <a href="/search" class="search-icon">
           {% render 'search' %}
         </a>
-        <a href="/account">
+        <a href="/account" class="user-icon">
           {% render 'user' %}
         </a>
-        <a href="/wishlist">
+        <a href="/wishlist" class="heart-icon">
           {% render 'heart' %}
         </a>
-        <a href="/cart">
+        <a href="/cart" class="cart-icon">
           {% render 'cart' %}
         </a>
       </div>

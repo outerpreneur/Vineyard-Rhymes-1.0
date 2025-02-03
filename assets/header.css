@@ -9,6 +9,15 @@ header {
   width: 100%;
 }
 
+/* mobile menu */
+.mobile-menu-icon-section {
+  display: none;
+}
+
+/* logo section */
+
+/* menu section */
+
 .main-nav-menu ul {
   display: flex;
   justify-content: space-between;
@@ -43,9 +52,30 @@ header {
   color: var(--navigation-accent-color) !important;
 }
 
-/* Menu icons */
+/* Menu icons section */
 
-.menu-icons a {
+.menu-icons-section a {
   text-decoration: none;
   color: #001a43;
+}
+
+/* responsive styles */
+
+@media (max-width: 600px) {
+  .shop-logo-section img {
+    width: 100px;
+  }
+
+  .mobile-menu-icon-section {
+    display: block;
+    cursor: pointer;
+  }
+
+  .user-icon {
+    display: none;
+  }
+
+  .main-nav-menu-section {
+    display: none;
+  }
 }
