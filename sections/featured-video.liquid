@@ -1,0 +1,78 @@
+<section id="shopify-section-{{ section.id}}" class="shopify-section featured-video">
+  <div class="page-width">
+    <div class="grid-cols-2">
+      <div class="col-1">
+        <div class="video-content">
+          <h2>Featured Video</h2>
+          <p>Watch our latest video to see how our products are made and how they can help you.</p>
+          <a href="/collections/all" class="btn">Shop Now</a>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/watch?v=-kgrc_EudVA"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <video>
+            <source src="{{ section.settings.video_url }}" type="video/mp4">
+          </video>
+          <iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Video",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Featured Video"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "Watch our latest video to see how our products are made and how they can help you."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "video_url",
+      "id": "video_youtube",
+      "label": "Video URL",
+      "default": "https://www.youtube.com/watch?v=-kgrc_EudVA",
+      "info": "Enter the URL of the video you want to display",
+      "accept": ["youtube"]
+    },
+    {
+      "type": "video",
+      "id": "video_url",
+      "label": "Video URL",
+      "info": "Enter the URL of the video you want to display"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL",
+      "default": "/collections/all"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Video"
+    }
+  ]
+}
+{% endschema %}
