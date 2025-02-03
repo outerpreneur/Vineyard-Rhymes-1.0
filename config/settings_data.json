@@ -8,7 +8,10 @@
  * ------------------------------------------------------------
  */
 {
-  "current": {},
+  "current": {
+    "header_background_color": "#ffffff",
+    "content_for_index": []
+  },
   "presets": {
     "Default": {}
   }
