@@ -8,8 +8,37 @@
     "theme_support_url": "https://outerpreneur.com"
   },
   {
-    "name": "colors",
+    "name": "Colors",
     "settings": [
+      {
+        "type": "header",
+        "content": "Header colors"
+      },
+      {
+        "type": "color",
+        "id": "header_background_color",
+        "label": "Header Background Color",
+        "default": "#bddcd2"
+      },
+      {
+        "type": "color",
+        "id": "navigation_text_color",
+        "label": "Navigation Text Color",
+        "default": "#333333",
+        "info": "Set the color for your navigation sale text."
+      },
+      {
+        "type": "color",
+        "id": "navigation_accent_color",
+        "label": "Navigation Text Accent",
+        "default": "#0077cc"
+      },
+      {
+        "type": "color",
+        "id": "navigation_text_hover_color",
+        "label": "Navigation Text Hover Color",
+        "default": "#005580"
+      },
       {
         "type": "header",
         "content": "Primary colors"
@@ -64,34 +93,6 @@
       },
       {
         "type": "header",
-        "content": "Header colors"
-      },
-      {
-        "type": "color",
-        "id": "header_background_color",
-        "label": "Header Background Color",
-        "default": "#bddcd2"
-      },
-      {
-        "type": "color",
-        "id": "header_text_color",
-        "label": "Header Text Color",
-        "default": "#333333"
-      },
-      {
-        "type": "color",
-        "id": "header_link_color",
-        "label": "Header Link Color",
-        "default": "#0077cc"
-      },
-      {
-        "type": "color",
-        "id": "header_link_hover_color",
-        "label": "Header Link Hover Color",
-        "default": "#005580"
-      },
-      {
-        "type": "header",
         "content": "Footer colors"
       },
       {
@@ -121,7 +122,7 @@
     ]
   },
   {
-    "name": "typography",
+    "name": "Typography",
     "settings": [
       {
         "type": "header",
@@ -147,13 +148,6 @@
         "max": 24,
         "step": 1,
         "info": "Set the font size for your navigation."
-      },
-      {
-        "type": "color",
-        "id": "navigation_color",
-        "label": "Navigation Color",
-        "default": "#333333",
-        "info": "Set the color for your navigation."
       },
       {
         "type": "header",
@@ -214,7 +208,7 @@
     ]
   },
   {
-    "name": "header",
+    "name": "Header",
     "settings": [
       {
         "type": "header",
@@ -236,7 +230,7 @@
     ]
   },
   {
-    "name": "footer",
+    "name": "Footer",
     "settings": [
       {
         "type": "header",

@@ -1,14 +1,22 @@
 {% comment %} Global dynamic styles {% endcomment %}
-
 {% style %}
   {{ settings.navigation_font | font_face: font_display: 'swap' }}
 
     :root {
-        --font-family: {{ settings.font_family }};
-        --font-size: {{ settings.font_size }};
+        /* header colors */
+        --header-background-color: {{ settings.header_background_color }};
+        --navigation-text-color: {{ settings.header_text_color }};
+        --navigation-accent-color: {{ settings.navigation_accent_color }};
+        --navigation-text-hover-color: {{ settings.navigation_text_hover_color }};
+        /* header font */
+        --navigation-font: {{ settings.navigation_font.family }};
+        --navigation-font-size: {{ settings.navigation_font_size }}px;
+
+        /* body color */
         --text-color: {{ settings.text_color }};
         --background-color: {{ settings.background_color }};
-        --header-background-color: {{ settings.header_background_color }};
-        --navigation-font: {{ settings.navigation_font.family }};
+        /* body font */
+        --font-family: {{ settings.font_family }};
+        --font-size: {{ settings.font_size }};
     }
 {% endstyle %}

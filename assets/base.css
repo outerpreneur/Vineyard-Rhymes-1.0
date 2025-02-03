@@ -153,4 +153,6 @@ table {
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
 }

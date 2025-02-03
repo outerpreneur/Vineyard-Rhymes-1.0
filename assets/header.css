@@ -24,23 +24,23 @@ header {
 }
 
 .main-nav-menu ul li a {
-  font-family: var(--navigation-font) !important;
+  font-family: var(--navigation-font);
+  font-size: var(--navigation-font-size);
+  color: var(--navigation-text-color);
   text-decoration: none;
-  color: #001a43;
   text-transform: uppercase;
 }
 
 .main-nav-menu ul:hover li a {
-  color: gray;
+  color: var(--navigation-text-hover-color);
 }
 
 .main-nav-menu ul li a:hover {
-  color: #001a43;
+  color: var(--navigation-text-color);
 }
 
 .main-nav-menu-link-sale {
-  font-family: var(--navigation-font) !important;
-  color: red !important;
+  color: var(--navigation-accent-color) !important;
 }
 
 /* Menu icons */
