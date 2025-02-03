@@ -9,10 +9,12 @@
           <a href="{{ block.settings.slider_link }}">
             <img
               src="{{ block.settings.slider_image | image_url }}"
+              srcset="{{ block.settings.slider_image | image_url }} 1024w, {{ block.settings.slider_image_mobile | image_url }} 768w"
+              sizes="(max-width: 768px) 768px, 1024px"
               width="300px"
               height=""
               loading="lazy"
-              alt="banner-1"
+              alt="{{ block.settings.alt_text }}"
             >
           </a>
         </div>
@@ -86,7 +88,14 @@
         {
           "type": "image_picker",
           "id": "slider_image",
-          "label": "Image"
+          "label": "Desktop Image",
+          "info": "Recommended size: 1024x1024px"
+        },
+        {
+          "type": "image_picker",
+          "id": "slider_image_mobile",
+          "label": "Mobile Image",
+          "info": "Recommended size: 768x1024px"
         },
         {
           "type": "text",

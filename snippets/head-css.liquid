@@ -2,6 +2,7 @@
 {% style %}
   {{ settings.navigation_font | font_face: font_display: 'swap' }}
   {{ settings.body_font | font_face: font_display: 'swap' }}
+  {{ settings.heading_font | font_face: font_display: 'swap' }}
 
     :root {
         /* header colors */
@@ -9,6 +10,7 @@
         --navigation-text-color: {{ settings.header_text_color }};
         --navigation-accent-color: {{ settings.navigation_accent_color }};
         --navigation-text-hover-color: {{ settings.navigation_text_hover_color }};
+        --heading-text-color: {{ settings.heading_text_color }};
         /* header font */
         --navigation-font: {{ settings.navigation_font.family }};
         --navigation-font-size: {{ settings.navigation_font_size }}px;
@@ -19,5 +21,9 @@
         /* body font */
         --body-font: {{ settings.body_font.family }};
         --font-size: {{ settings.font_size }};
+
+        /* heading font */
+        --heading-font: {{ settings.heading_font.family }};
+        --heading-font-size: {{ settings.heading_font_size }}px;
     }
 {% endstyle %}

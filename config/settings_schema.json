@@ -38,6 +38,16 @@
         "id": "navigation_text_hover_color",
         "label": "Navigation Text Hover Color",
         "default": "#005580"
+      },
+      {
+        "type": "header",
+        "content": "Heading colors"
+      },
+      {
+        "type": "color",
+        "id": "heading_text_color",
+        "label": "Heading Text Color",
+        "default": "#333333"
       }
       // {
       //   "type": "header",
