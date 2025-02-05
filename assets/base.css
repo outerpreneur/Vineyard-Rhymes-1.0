@@ -59,7 +59,7 @@
 
 body {
   background-color: var(--background-color);
-  font-family: var(--body-font);
+  font-family: var(--body-font) !important;
   color: var(--text-color);
   font-size: var(--font-size);
 }
@@ -73,6 +73,8 @@ a:hover {
   color: var(--link-hover-color);
 }
 
+/* headings */
+
 h1,
 h2,
 h3,
@@ -81,6 +83,42 @@ h5,
 h6 {
   font-family: var(--heading-font);
   color: var(--heading-text-color);
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.4em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.8em;
+}
+
+h5 {
+  font-size: 1.5em;
+}
+
+h6 {
+  font-size: 1.2em;
+}
+
+/* buttons */
+
+.add-to-cart-primary-button {
+  background-color: var(--primary-add-to-cart-color);
+  color: var(--primary-add-to-cart-text-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
 /* responsive styles */

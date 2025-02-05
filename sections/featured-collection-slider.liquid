@@ -15,7 +15,7 @@
         <div class="col-12">
           <div class="featured-collection-slider">
             <div class="featured-collection-slider-wrapper swiper-wrapper">
-              {% if section.settings.collection %}
+              {% if section.settings.collection != blank %}
                 {% assign collection = collections[section.settings.collection] %}
                 {% for product in collection.products %}
                   <div class="featured-collection-slider__slide swiper-slide">
@@ -30,25 +30,50 @@
                           >
                         </a>
                       </div>
-                      <div class="featured-collection-slider__slide-content">
+                      <div class="featured-collection-slider__slide-content text-center">
                         <h3 class="featured-collection-slider__slide-title">
                           <a href="{{ product.url }}">{{ product.title }}</a>
                         </h3>
-                        <a href="{{ product.url }}" class="featured-collection-slider__slide-link">
-                          {{- section.settings.button_text -}}
-                        </a>
                       </div>
+                      <a
+                        href="{{ product.url }}"
+                        class="featured-collection-slider__slide-link add-to-cart-primary-button"
+                      >
+                        {{- section.settings.button_text -}}
+                      </a>
                     </div>
                   </div>
                 {% endfor %}
               {% else %}
-                <p>No collection selected.</p>
+                {{ 'product-1' | placeholder_svg_tag }}
+
+                {% for i in (1..10) %}
+                  <div class="featured-collection-slider__slide swiper-slide">
+                    <div class="featured-collection-slider__slide-card">
+                      <div class="featured-collection-slider__slide-image">
+                        <a href="#">
+                          {{ 'product-1' | placeholder_svg_tag: 'featured-collection-slider__slide-image' }}
+                        </a>
+                      </div>
+                      <div class="featured-collection-slider__slide-content text-center">
+                        <h3 class="featured-collection-slider__slide-title">
+                          <a href="#">Product Title</a>
+                        </h3>
+                      </div>
+                      <a href="#" class="featured-collection-slider__slide-link add-to-cart-primary-button">
+                        Buy now
+                      </a>
+                    </div>
+                  </div>
+                {% endfor %}
               {% endif %}
-              <div class="swiper-pagination"></div>
+            </div>
+            {% comment %} <div class="swiper-pagination"></div> {% endcomment %}
+            {% comment %}
               <!-- If we need navigation buttons -->
               <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div>
-            </div>
+            {% endcomment %}
           </div>
         </div>
       </div>
@@ -59,6 +84,8 @@
 {% style %}
   #shopify-section-{{ section.id }} .featured-collection-slider-section {
      padding: 60px 0;
+     width: 100%;
+     height: 100%;
    }
 
    #shopify-section-{{ section.id }} .section-header__title {
@@ -70,19 +97,48 @@
     overflow: hidden;
    }
 
+    #shopify-section-{{ section.id }} .featured-collection-slider-wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
    #shopify-section-{{ section.id }} .featured-collection-slider__slide-card {
      display: flex;
      flex-direction: column;
      align-items: center;
+     height: 400px;
+     justify-content: space-between;
    }
 
    #shopify-section-{{ section.id }} .featured-collection-slider__slide-image {
      margin-bottom: 20px;
+     width: 100%;
+     background-color: whitesmoke;
    }
 
    #shopify-section-{{ section.id }} .featured-collection-slider__slide-image img {
      max-width: 100%;
    }
+
+   #shopify-section-{{ section.id }} .featured-collection-slider__slide-content {
+   }
+
+   #shopify-section-{{ section.id }} .featured-collection-slider__slide-title {
+    color: var(--heading-text-color);
+    margin-bottom: 1em;
+   }
+
+
+    /* #shopify-section-{{ section.id }}  .swiper-button-prev,
+  .swiper-button-next {
+    background-color: #fff !important; /* Adjust color as needed */
+    color: #000; /* Adjust color as needed */
+  }
+
+  .swiper-pagination {
+    bottom: 10px; /* Adjust position as needed */
+    background-color: #fff !important;
+  } */
 {% endstyle %}
 
 {% javascript %}
