@@ -1,0 +1,168 @@
+<link rel="stylesheet" href="{{ 'swiper.css' | asset_url }}">
+<script src="{{ 'swiper.js' | asset_url }}"></script>
+
+<section id="shopify-section-{{ section.id }}" class="shopify-section">
+  <div class="featured-collection-slider-section">
+    <div class="container page-width">
+      <div class="row">
+        <div class="col-12">
+          <div class="section-header text-center all-center padding-20">
+            <h2 class="section-header__title">{{ section.settings.title }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="featured-collection-slider">
+            <div class="featured-collection-slider-wrapper swiper-wrapper">
+              {% if section.settings.collection %}
+                {% assign collection = collections[section.settings.collection] %}
+                {% for product in collection.products %}
+                  <div class="featured-collection-slider__slide swiper-slide">
+                    <div class="featured-collection-slider__slide-card">
+                      <div class="featured-collection-slider__slide-image">
+                        <a href="{{ product.url }}">
+                          <img
+                            src="{{ product.featured_image | image_url }}"
+                            height=""
+                            width=""
+                            alt="{{ product.title }}"
+                          >
+                        </a>
+                      </div>
+                      <div class="featured-collection-slider__slide-content">
+                        <h3 class="featured-collection-slider__slide-title">
+                          <a href="{{ product.url }}">{{ product.title }}</a>
+                        </h3>
+                        <a href="{{ product.url }}" class="featured-collection-slider__slide-link">
+                          {{- section.settings.button_text -}}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
+              {% else %}
+                <p>No collection selected.</p>
+              {% endif %}
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% style %}
+  #shopify-section-{{ section.id }} .featured-collection-slider-section {
+     padding: 60px 0;
+   }
+
+   #shopify-section-{{ section.id }} .section-header__title {
+     font-size: 2.5rem;
+     color: var(--heading-text-color);
+   }
+
+   #shopify-section-{{ section.id }} .featured-collection-slider {
+    overflow: hidden;
+   }
+
+   #shopify-section-{{ section.id }} .featured-collection-slider__slide-card {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
+
+   #shopify-section-{{ section.id }} .featured-collection-slider__slide-image {
+     margin-bottom: 20px;
+   }
+
+   #shopify-section-{{ section.id }} .featured-collection-slider__slide-image img {
+     max-width: 100%;
+   }
+{% endstyle %}
+
+{% javascript %}
+  const swiper = new Swiper('.featured-collection-slider', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    effect: 'slide',
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 1,
+    spaceBetween: 10,
+    breakpoints: {
+      // when window width is >= 640px
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      // when window width is >= 1024px
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      1300: {
+        slidesPerView: 5,
+        spaceBetween: 40,
+      },
+    },
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    // Pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Featured Collection",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Featured Collection"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "Discover our latest collection of products."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Collection"
+    }
+  ]
+}
+{% endschema %}

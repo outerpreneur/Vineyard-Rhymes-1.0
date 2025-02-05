@@ -2,9 +2,57 @@
 
 .page-width {
   width: 100%;
-  max-width: 1500px;
+  max-width: 1650px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.padding-10 {
+  padding: 10px;
+}
+
+.padding-20 {
+  padding: 20px;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+.horizontal-center {
+  display: flex;
+  justify-content: center;
+}
+
+.all-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Global styles */

@@ -1,48 +1,66 @@
 <section id="shopify-section-{{ section.id}}" class="shopify-section featured-video">
   <div class="page-width">
     <div class="grid-cols-2">
-      <div class="col-1">
-        <div class="video-content">
-          <h2>Featured Video</h2>
-          <p>Watch our latest video to see how our products are made and how they can help you.</p>
-          <a href="/collections/all" class="btn">Shop Now</a>
-        </div>
-      </div>
+      <div class="col-1"></div>
       <div class="col-2">
         <div class="video-container">
           <iframe
             width="100%"
-            height="850px"
+            height="700px"
             src="https://www.youtube-nocookie.com/embed/-kgrc_EudVA?si=GNvIvjLkK3KZ8gzK&amp;controls=0"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
+            autoplay
           ></iframe>
-          <video>
-            <source src="{{ section.settings.video_url }}" type="video/mp4">
-          </video>
-          <iframe
-            src="https://cdn.shopify.com/videos/c/o/v/7972ae4c4d6c4de3b1a5c7036f35439a.mp4"
-            width="100%"
-            height="850px"
-            frameborder="0"
-            allowfullscreen
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            title="W3Schools Free Online Web Tutorials"
-          ></iframe>
+
+          {% comment %}
+            <iframe
+              src="https://cdn.shopify.com/videos/c/o/v/7972ae4c4d6c4de3b1a5c7036f35439a.mp4"
+              width="100%"
+              height="850px"
+              frameborder="0"
+              allowfullscreen
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              title="W3Schools Free Online Web Tutorials"
+              autoplay
+            ></iframe>
+          {% endcomment %}
         </div>
       </div>
     </div>
   </div>
 </section>
 
+{% style %}
+  .grid-cols-2 {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 0;
+  }
+
+  .col-1 {
+    background-image: url('{{ section.settings.background_image | image_url }}');
+    background-size: cover;
+  }
+
+  iframe {
+    border: none;
+  }
+{% endstyle %}
+
 {% schema %}
 {
   "name": "Featured Video",
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
     {
       "type": "text",
       "id": "title",
