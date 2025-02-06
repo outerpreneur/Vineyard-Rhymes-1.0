@@ -1,9 +1,15 @@
 <section id="shopify-section-{{ section.id}}" class="shopify-section featured-video">
   <div class="page-width">
     <div class="grid-cols-2">
-      <div class="col-1 flex all-center">
+      <div class="col-1 flex all-center text-center">
         <div class="container flex all-center space-between">
-          <img src="{{ 'logo.png' | asset_url }}" alt="Logo" class="featured-video-logo">
+          <img
+            src="{{ section.settings.column_image | image_url }}"
+            width=""
+            height=""
+            alt="column-image"
+            class="featured-image"
+          >
           <h1>{{ section.settings.title }}</h1>
           <p>{{ section.settings.description }}</p>
           <a href="{{ section.settings.button_url }}" class="btn btn-primary">{{ section.settings.button_text }}</a>
@@ -39,11 +45,11 @@
     background: linear-gradient(to right, #3d86c9, #8cbae2, #3d86c9);
     background-size: cover;
     color: #fff
-
   }
 
   #shopify-section-{{ section.id}} .col-1 .container {
     flex-direction: column;
+    min-height: 300px;
   }
 
   #shopify-section-{{ section.id}} iframe {
@@ -57,8 +63,8 @@
   "settings": [
     {
       "type": "image_picker",
-      "id": "background_image",
-      "label": "Background Image"
+      "id": "column_image",
+      "label": "Image"
     },
     {
       "type": "text",
