@@ -37,7 +37,7 @@
                       </div>
                       <a
                         href="{{ product.url }}"
-                        class="featured-collection-slider__slide-link add-to-cart-primary-button"
+                        class="featured-collection-slider__slide-link primary-button"
                       >
                         {{- section.settings.button_text -}}
                       </a>
@@ -60,18 +60,18 @@
                           <a href="#">Product Title</a>
                         </h3>
                       </div>
-                      <a href="#" class="featured-collection-slider__slide-link add-to-cart-primary-button">
-                        Buy now
-                      </a>
+                      <a href="#" class="featured-collection-slider__slide-link primary-button"> Buy now </a>
                     </div>
                   </div>
                 {% endfor %}
               {% endif %}
             </div>
-            <div class="swiper-pagination"></div>
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            {% comment %}
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            {% endcomment %}
           </div>
         </div>
       </div>
@@ -173,15 +173,15 @@
       },
     },
     // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // },
     // Pagination
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   clickable: true,
+    // },
   });
 {% endjavascript %}
 
