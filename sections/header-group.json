@@ -128,6 +128,7 @@
     "featured_video_Pd8FLa": {
       "type": "featured-video",
       "settings": {
+        "column_image": "shopify://shop_images/Vineyard-Vines-Logo.png",
         "title": "Featured Video",
         "description": "Watch our latest video to see how our products are made and how they can help you.",
         "button_text": "Shop Now",
