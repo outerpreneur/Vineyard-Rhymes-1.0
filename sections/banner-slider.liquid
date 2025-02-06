@@ -7,15 +7,19 @@
       {% for block in section.blocks %}
         <div class="swiper-slide">
           <a href="{{ block.settings.slider_link }}">
-            <img
-              src="{{ block.settings.slider_image | image_url }}"
-              srcset="{{ block.settings.slider_image | image_url }} 1024w, {{ block.settings.slider_image_mobile | image_url }} 768w"
-              sizes="(max-width: 768px) 768px, 1024px"
-              width="300px"
-              height=""
-              loading="lazy"
-              alt="{{ block.settings.alt_text }}"
-            >
+            {% if block.settings.slider_image != blank %}
+              <img
+                src="{{ block.settings.slider_image | image_url }}"
+                srcset="{{ block.settings.slider_image | image_url }} 1024w, {{ block.settings.slider_image_mobile | image_url }} 768w"
+                sizes="(max-width: 768px) 768px, 1024px"
+                width="300px"
+                height=""
+                loading="lazy"
+                alt="{{ block.settings.alt_text }}"
+              >
+            {% else %}
+              {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder' }}
+            {% endif %}
           </a>
         </div>
       {% endfor %}

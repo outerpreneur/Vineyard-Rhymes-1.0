@@ -1,7 +1,14 @@
 <section id="shopify-section-{{ section.id}}" class="shopify-section featured-video">
   <div class="page-width">
     <div class="grid-cols-2">
-      <div class="col-1"></div>
+      <div class="col-1 flex all-center">
+        <div class="container flex all-center space-between">
+          <img src="{{ 'logo.png' | asset_url }}" alt="Logo" class="featured-video-logo">
+          <h1>{{ section.settings.title }}</h1>
+          <p>{{ section.settings.description }}</p>
+          <a href="{{ section.settings.button_url }}" class="btn btn-primary">{{ section.settings.button_text }}</a>
+        </div>
+      </div>
       <div class="col-2">
         <div class="video-container">
           <iframe
@@ -15,20 +22,6 @@
             allowfullscreen
             autoplay
           ></iframe>
-
-          {% comment %}
-            <iframe
-              src="https://cdn.shopify.com/videos/c/o/v/7972ae4c4d6c4de3b1a5c7036f35439a.mp4"
-              width="100%"
-              height="850px"
-              frameborder="0"
-              allowfullscreen
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              title="W3Schools Free Online Web Tutorials"
-              autoplay
-            ></iframe>
-          {% endcomment %}
         </div>
       </div>
     </div>
@@ -36,18 +29,24 @@
 </section>
 
 {% style %}
-  .grid-cols-2 {
+  #shopify-section-{{ section.id}} .grid-cols-2 {
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: 0;
   }
 
-  .col-1 {
-    background-image: url('{{ section.settings.background_image | image_url }}');
+  #shopify-section-{{ section.id}} .col-1 {
+    background: linear-gradient(to right, #3d86c9, #8cbae2, #3d86c9);
     background-size: cover;
+    color: #fff
+
   }
 
-  iframe {
+  #shopify-section-{{ section.id}} .col-1 .container {
+    flex-direction: column;
+  }
+
+  #shopify-section-{{ section.id}} iframe {
     border: none;
   }
 {% endstyle %}
