@@ -123,7 +123,7 @@ h6 {
 
 /* buttons */
 
-.add-to-cart-primary-button {
+.primary-button {
   background-color: var(--primary-background-color);
   color: var(--primary-text-color);
   padding: 10px 20px;
@@ -133,7 +133,7 @@ h6 {
   text-transform: uppercase;
 }
 
-.add-to-cart-primary-button:hover {
+.primary-button:hover {
   background-color: var(--primary-background-color-hover);
   color: var(--primary-text-color-hover);
 }
