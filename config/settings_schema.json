@@ -55,40 +55,29 @@
       },
       {
         "type": "color",
-        "id": "primary_add_to_cart_color",
-        "label": "Primary Add to Cart Color",
-        "default": "#001a43"
-      },
-      {
-        "type": "color",
-        "id": "primary_add_to_cart_text_color",
-        "label": "Primary Add to Cart Text Color",
-        "default": "#ffffff"
-      },
-      {
-        "type": "color",
-        "id": "primary_add_to_cart_hover_color",
-        "label": "Primary Add to Cart Hover Color",
-        "default": "#f8f8f8"
-      },
-      {
-        "type": "color",
-        "id": "primary_add_to_cart_hover_text_color",
-        "label": "Primary Add to Cart Hover Text Color",
-        "default": "#333333"
-      },
-      {
-        "type": "color",
         "id": "primary_background_color",
         "label": "Primary Background Color",
-        "default": "#f8f8f8"
+        "default": "#001a43"
       },
       {
         "type": "color",
         "id": "primary_text_color",
         "label": "Primary Text Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "primary_background_color_hover",
+        "label": "Primary background Color Hover",
+        "default": "#f8f8f8"
+      },
+      {
+        "type": "color",
+        "id": "primary_text_color_hover",
+        "label": "Primary Text Color Hover",
         "default": "#333333"
       },
+
       {
         "type": "color",
         "id": "primary_link_color",
@@ -100,30 +89,6 @@
         "id": "primary_link_hover_color",
         "label": "Primary Link Hover Color",
         "default": "#005580"
-      },
-      {
-        "type": "color",
-        "id": "primary_button_color",
-        "label": "Primary Button Color",
-        "default": "#0077cc"
-      },
-      {
-        "type": "color",
-        "id": "primary_button_text_color",
-        "label": "Primary Button Text Color",
-        "default": "#ffffff"
-      },
-      {
-        "type": "color",
-        "id": "primary_button_hover_color",
-        "label": "Primary Button Hover Color",
-        "default": "#005580"
-      },
-      {
-        "type": "color",
-        "id": "primary_button_hover_text_color",
-        "label": "Primary Button Hover Text Color",
-        "default": "#ffffff"
       },
       {
         "type": "header",
