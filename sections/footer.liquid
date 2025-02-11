@@ -1,0 +1,261 @@
+<footer id="footer" class="footer">
+  <div class="footer__top page-width">
+    <div class="container">
+      <div class="footer__top-inner">
+        <div class="footer__top-item">
+          <h3 class="footer__top-title">About Us</h3>
+          <p class="footer__top-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc.
+          </p>
+        </div>
+        <div class="footer__top-item">
+          <h3 class="footer__top-title">Quick Links</h3>
+          <ul class="footer__top-list">
+            <li class="footer__top-list-item"><a href="#">Home</a></li>
+            <li class="footer__top-list-item"><a href="#">Shop</a></li>
+            <li class="footer__top-list-item"><a href="#">About</a></li>
+            <li class="footer__top-list-item"><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__top-item">
+          <h3 class="footer__top-title">Contact Us</h3>
+          <p class="footer__top-text">1234 Street Name, City Name, United States</p>
+          <p class="footer__top-text">+123-456-7890</p>
+          <p class="footer__top-text">
+            <a href="mailto:" class="footer__top-link"> </a>
+          </p>
+        </div>
+        <div class="footer__top-item">
+          <h3 class="footer__top-title">Newsletter</h3>
+          <p class="footer__top-text">Subscribe to our newsletter and get 10% off your first purchase</p>
+          <form action="#" method="post" class="footer__top-form">
+            <input type="email" name="email" placeholder="Enter your email" class="footer__top-input">
+            <button type="submit" class="footer__top-button">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container page-width">
+      <div class="footer__bottom-inner">
+        <div class="footer__bottom-item">
+          <p class="footer__bottom-text">
+            © {{ 'now' | date: '%Y' }}
+            <a href="#" class="footer__bottom-link">{{ shop.name }}</a>. All Rights Reserved.
+          </p>
+        </div>
+        <div class="footer__bottom-item">
+          <ul class="footer__bottom-list">
+            <li class="footer__bottom-list-item"><a href="#" class="footer__bottom-link">Terms of Service</a></li>
+            <li class="footer__bottom-list-item"><a href="#" class="footer__bottom-link">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% style %}
+  .footer {
+    background-color: #f9f9f9;
+  }
+
+  .footer__top {
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .footer__top-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .footer__top-item {
+    flex: 1;
+    margin: 0 15px;
+    min-width: 200px;
+  }
+
+  .footer__top-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .footer__top-text {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  .footer__top-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer__top-list-item {
+    margin-bottom: 5px;
+  }
+
+  .footer__top-list-item a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .footer__top-list-item a:hover {
+    text-decoration: underline;
+  }
+
+  .footer__top-form {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .footer__top-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 10px;
+  }
+
+  .footer__top-button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .footer__top-button:hover {
+    background-color: #555;
+  }
+
+  .footer__bottom {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+
+  .footer__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .footer__bottom-item {
+    flex: 1;
+    margin: 0 15px;
+    min-width: 200px;
+  }
+
+  .footer__bottom-text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .footer__bottom-link {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .footer__bottom-link:hover {
+    text-decoration: underline;
+  }
+
+  .footer__bottom-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .footer__bottom-list-item {
+    margin-right: 15px;
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "footer_title",
+      "label": "Footer Title",
+      "default": "Footer"
+    },
+    {
+      "type": "text",
+      "id": "footer_text",
+      "label": "Footer Text",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc."
+    },
+    {
+      "type": "text",
+      "id": "footer_address",
+      "label": "Footer Address",
+      "default": "1234 Street Name, City Name, United States"
+    },
+    {
+      "type": "text",
+      "id": "footer_phone",
+      "label": "Footer Phone",
+      "default": "+123-456-7890"
+    },
+    {
+      "type": "text",
+      "id": "footer_email",
+      "label": "Footer Email",
+      "default": "hello@email.com"
+    },
+    {
+      "type": "text",
+      "id": "footer_newsletter_text",
+      "label": "Footer Newsletter Text",
+      "default": "Subscribe to our newsletter and get 10% off your first purchase"
+    },
+    {
+      "type": "text",
+      "id": "footer_newsletter_button",
+      "label": "Footer Newsletter Button",
+      "default": "Subscribe"
+    },
+    {
+      "type": "text",
+      "id": "footer_copy",
+      "label": "Footer Copy",
+      "default": "© {{ 'now' | date: '%Y' }} {{ shop.name }}. All Rights Reserved."
+    },
+    {
+      "type": "text",
+      "id": "footer_terms",
+      "label": "Footer Terms",
+      "default": "Terms of Service"
+    },
+    {
+      "type": "text",
+      "id": "footer_privacy",
+      "label": "Footer Privacy",
+      "default": "Privacy Policy"
+    },
+    {
+      "type": "text",
+      "id": "footer_terms_link",
+      "label": "Footer Terms Link",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "id": "footer_privacy_link",
+      "label": "Footer Privacy Link",
+      "default": "#"
+    }
+  ]
+}
+{% endschema %}
