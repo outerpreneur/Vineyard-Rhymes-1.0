@@ -14,9 +14,81 @@
       "settings": {
         "alt_text": ""
       }
+    },
+    "banner_slider_dUxNWt": {
+      "type": "banner-slider",
+      "blocks": {
+        "banner_dY43PK": {
+          "type": "banner",
+          "settings": {
+            "alt_text": "",
+            "slider_link": ""
+          }
+        },
+        "banner_VthVUg": {
+          "type": "banner",
+          "settings": {
+            "alt_text": "",
+            "slider_link": ""
+          }
+        },
+        "banner_EhTNfU": {
+          "type": "banner",
+          "settings": {
+            "alt_text": "",
+            "slider_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "banner_dY43PK",
+        "banner_VthVUg",
+        "banner_EhTNfU"
+      ],
+      "settings": {}
+    },
+    "featured_collection_list_cRYgTk": {
+      "type": "featured-collection-list",
+      "blocks": {
+        "collection_QBwMCg": {
+          "type": "collection",
+          "settings": {
+            "featured_collection": "woman"
+          }
+        },
+        "collection_G6PYta": {
+          "type": "collection",
+          "settings": {
+            "featured_collection": "new"
+          }
+        },
+        "collection_GizEQ7": {
+          "type": "collection",
+          "settings": {
+            "featured_collection": "kids"
+          }
+        },
+        "collection_3gCicG": {
+          "type": "collection",
+          "settings": {
+            "featured_collection": "sale"
+          }
+        }
+      },
+      "block_order": [
+        "collection_QBwMCg",
+        "collection_G6PYta",
+        "collection_GizEQ7",
+        "collection_3gCicG"
+      ],
+      "settings": {
+        "subtitle": "It’s only blue skies and comfortable styles in our latest batch of new arrivals."
+      }
     }
   },
   "order": [
-    "image_banner_NtdeG3"
+    "image_banner_NtdeG3",
+    "banner_slider_dUxNWt",
+    "featured_collection_list_cRYgTk"
   ]
 }
