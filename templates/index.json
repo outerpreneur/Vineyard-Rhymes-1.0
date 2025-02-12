@@ -23,7 +23,7 @@
         "banner_dY43PK": {
           "type": "banner",
           "settings": {
-            "slider_image": "shopify://shop_images/reduced-picture010825_H4_Desktop.webp",
+            "slider_image_desktop": "shopify://shop_images/reduced-picture010825_H4_Desktop.webp",
             "slider_image_mobile": "shopify://shop_images/reduced-picture010825_H4_Mobile.webp",
             "alt_text": "",
             "slider_link": ""
@@ -32,7 +32,7 @@
         "banner_VthVUg": {
           "type": "banner",
           "settings": {
-            "slider_image": "shopify://shop_images/reduced-picture010825_H3_Desktop-10.webp",
+            "slider_image_desktop": "shopify://shop_images/reduced-picture010825_H3_Desktop-10.webp",
             "slider_image_mobile": "shopify://shop_images/reduced-picture010825_H3_Mobile-1.webp",
             "alt_text": "",
             "slider_link": ""
