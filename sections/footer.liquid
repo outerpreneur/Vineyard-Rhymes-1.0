@@ -3,9 +3,9 @@
     <div class="container">
       <div class="footer__top-inner">
         <div class="footer__top-item">
-          <h3 class="footer__top-title">About Us</h3>
+          <h3 class="footer__top-title">{{ section.settings.footer_title }}</h3>
           <p class="footer__top-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc.
+            {{ section.settings.footer_text }}
           </p>
         </div>
         <div class="footer__top-item">
@@ -19,18 +19,20 @@
         </div>
         <div class="footer__top-item">
           <h3 class="footer__top-title">Contact Us</h3>
-          <p class="footer__top-text">1234 Street Name, City Name, United States</p>
-          <p class="footer__top-text">+123-456-7890</p>
+          <p class="footer__top-text">{{ section.settings.footer_address }}</p>
+          <p class="footer__top-text">{{ section.settings.footer_phone }}</p>
           <p class="footer__top-text">
-            <a href="mailto:" class="footer__top-link"> </a>
+            <a href="mailto:{{ section.settings.footer_email }}" class="footer__top-link">
+              {{- section.settings.footer_email -}}
+            </a>
           </p>
         </div>
         <div class="footer__top-item">
           <h3 class="footer__top-title">Newsletter</h3>
-          <p class="footer__top-text">Subscribe to our newsletter and get 10% off your first purchase</p>
+          <p class="footer__top-text">{{ section.settings.footer_newsletter_text }}</p>
           <form action="#" method="post" class="footer__top-form">
             <input type="email" name="email" placeholder="Enter your email" class="footer__top-input">
-            <button type="submit" class="footer__top-button">Subscribe</button>
+            <button type="submit" class="footer__top-button">{{ section.settings.footer_newsletter_button }}</button>
           </form>
         </div>
       </div>
@@ -41,14 +43,21 @@
       <div class="footer__bottom-inner">
         <div class="footer__bottom-item">
           <p class="footer__bottom-text">
-            © {{ 'now' | date: '%Y' }}
-            <a href="#" class="footer__bottom-link">{{ shop.name }}</a>. All Rights Reserved.
+            {{ section.settings.footer_copy }}
           </p>
         </div>
         <div class="footer__bottom-item">
           <ul class="footer__bottom-list">
-            <li class="footer__bottom-list-item"><a href="#" class="footer__bottom-link">Terms of Service</a></li>
-            <li class="footer__bottom-list-item"><a href="#" class="footer__bottom-link">Privacy Policy</a></li>
+            <li class="footer__bottom-list-item">
+              <a href="{{ section.settings.footer_terms_link }}" class="footer__bottom-link">
+                {{- section.settings.footer_terms -}}
+              </a>
+            </li>
+            <li class="footer__bottom-list-item">
+              <a href="{{ section.settings.footer_privacy_link }}" class="footer__bottom-link">
+                {{- section.settings.footer_privacy -}}
+              </a>
+            </li>
           </ul>
         </div>
       </div>
