@@ -149,35 +149,35 @@
         "label": "Secondary Button Hover Text Color",
         "default": "#ffffff",
         "info": "Set the button hover text color for your secondary elements."
+      },
+      {
+        "type": "header",
+        "content": "Footer colors"
+      },
+      {
+        "type": "color",
+        "id": "footer_background_color",
+        "label": "Footer Background Color",
+        "default": "#f8f8f8"
+      },
+      {
+        "type": "color",
+        "id": "footer_text_color",
+        "label": "Footer Text Color",
+        "default": "#333333"
+      },
+      {
+        "type": "color",
+        "id": "footer_link_color",
+        "label": "Footer Link Color",
+        "default": "#0077cc"
+      },
+      {
+        "type": "color",
+        "id": "footer_link_hover_color",
+        "label": "Footer Link Hover Color",
+        "default": "#005580"
       }
-      // {
-      //   "type": "header",
-      //   "content": "Footer colors"
-      // },
-      // {
-      //   "type": "color",
-      //   "id": "footer_background_color",
-      //   "label": "Footer Background Color",
-      //   "default": "#f8f8f8"
-      // },
-      // {
-      //   "type": "color",
-      //   "id": "footer_text_color",
-      //   "label": "Footer Text Color",
-      //   "default": "#333333"
-      // },
-      // {
-      //   "type": "color",
-      //   "id": "footer_link_color",
-      //   "label": "Footer Link Color",
-      //   "default": "#0077cc"
-      // },
-      // {
-      //   "type": "color",
-      //   "id": "footer_link_hover_color",
-      //   "label": "Footer Link Hover Color",
-      //   "default": "#005580"
-      // }
     ]
   },
   {

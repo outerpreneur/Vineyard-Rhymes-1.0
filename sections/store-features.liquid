@@ -1,68 +1,88 @@
-<section id={{ section.id }} class="shopify-section store-features">
+<section id=shopify-section-{{ section.id }} class="shopify-section store-features">
   <div class="container">
     <div class="store-features-inner">
-      <div class="store-features-item">
-        <img src="https://cdn.shopify.com/s/files/1/0455/2176/4502/files/feature-1.png?v=1634710000" alt="Free Shipping" class="store-features-image">
-        <h3 class="store-features-title">Free Shipping</h3>
-        <p class="store-features-text">Free shipping on all orders over $50</p>
-      </div>
-      <div class="store-features-item">
-        <img src="https://cdn.shopify.com/s/files/1/0455/2176/4502/files/feature-2.png?v=1634710000" alt="24/7 Support" class="store-features-image">
-        <h3 class="store-features-title">24/7 Support</h3>
-        <p class="store-features-text">Customer support available 24/7</p>
-      </div>
-      <div class="store-features-item">
-        <img src="https://cdn.shopify.com/s/files/1/0455/2176/4502/files/feature-3.png?v=1634710000" alt="Secure Payment" class="store-features-image">
-        <h3 class="store-features-title">Secure Payment</h3>
-        <p class="store-features-text">Secure payment with 256-bit encryption</p>
-      </div>
+      {% for block in section.blocks %}
+        <div class="store-features-item">
+          {% if block.settings.image %}
+            <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.title }}" class="store-features-image">
+          {% endif %}
+          {% if block.settings.title %}
+            <h3 class="store-features-title">{{ block.settings.title }}</h3>
+          {% endif %}
+          {% if block.settings.text %}
+            <p class="store-features-text">{{ block.settings.text }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
     </div>
   </div>
 
   {%  style  %}  
-    .store-features {
-      padding: 60px 0;
-      background-color: #f9f9f9;
+    #shopify-section-{{ section.id }} .store-features {
+      padding: 30px 0;
+      background-color: {{ section.settings.background_color }};
     }
 
-    .store-features-inner {
+    #shopify-section-{{ section.id }} .store-features-inner {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
     }
 
-    .store-features-item {
+    #shopify-section-{{ section.id }} .store-features-item {
       flex: 1;
       text-align: center;
       margin-bottom: 30px;
     }
 
-    .store-features-image {
-      width: 100px;
-      height: 100px;
+    #shopify-section-{{ section.id }} .store-features-image {
+      height: 50px;
       margin-bottom: 20px;
     }
 
-    .store-features-title {
+    #shopify-section-{{ section.id }} .store-features-title {
       font-size: 24px;
       font-weight: 700;
       margin-bottom: 10px;
+      color: {{ section.settings.text_color }};
     }
 
-    .store-features-text {
+    #shopify-section-{{ section.id }} .store-features-text {
       font-size: 16px;
       color: #666;
     }
+
+    /* responsive styles */
+
+    @media (max-width: 768px) {
+      #shopify-section-{{ section.id }} .store-features-item {
+        flex: 1 1 100%;
+      }
+
+      #shopify-section-{{ section.id }} .store-features-image {
+        width: 70px;
+      }
+
+      #shopify-section-{{ section.id }} .store-features-title {
+        font-size: 20px;
+      }
+
+      #shopify-section-{{ section.id }} .store-features-text {
+            font-size: 14px;
+      } 
+    }
+   
   {%  endstyle  %}
 
 {%  schema %}
 {
   "name": "Store Features",
-  "settings": [],
-  "presets": [
+  "settings": [
     {
-      "name": "Store Features",
-      "category": "Store Features"
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f9f9f9"
     }
   ],
     "blocks": [
@@ -90,7 +110,31 @@
     ],
     "presets": [
         {
-        "name": "Store Features"        }
+        "name": "Store Features",
+        "blocks": [
+            {
+            "type": "store-features",
+            "settings": {
+                "title": "Free Shipping",
+                "text": "Free shipping on all orders over $50"
+            }
+            },
+            {
+            "type": "store-features",
+            "settings": {
+                "title": "Easy Returns",
+                "text": "Hassle-free returns within 30 days"
+            }
+            },
+            {
+            "type": "store-features",
+            "settings": {
+                "title": "Secure Payments",
+                "text": "Secure payment options"
+            }
+            }
+        ]
+    }
     ],
     "enabled_on": {
     "groups": ["footer"]

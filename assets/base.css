@@ -190,6 +190,14 @@ a:hover {
   color: var(--primary-text-color-hover);
 }
 
+/* structure */
+
+footer {
+  background-color: var(--footer-background-color);
+  color: var(--footer-text-color);
+  padding: 20px 0;
+}
+
 /* responsive styles */
 
 @media (max-width: 1024px) {
