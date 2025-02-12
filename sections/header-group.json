@@ -50,37 +50,10 @@
         "logo": "shopify://shop_images/Vineyard-Vines-Logo.png",
         "logo_width": 200
       }
-    },
-    "rotating_announcement_hV4J8d": {
-      "type": "rotating-announcement",
-      "blocks": {
-        "announcement_7rJ4Yh": {
-          "type": "announcement",
-          "settings": {
-            "title": "Announcement"
-          }
-        },
-        "announcement_iekJTz": {
-          "type": "announcement",
-          "settings": {
-            "title": "Bye"
-          }
-        }
-      },
-      "block_order": [
-        "announcement_7rJ4Yh",
-        "announcement_iekJTz"
-      ],
-      "settings": {
-        "title": "Announcement",
-        "announcement_background_color": "#001a43",
-        "announcement_text_color": "#ffffff"
-      }
     }
   },
   "order": [
     "rotating-announcement",
-    "header",
-    "rotating_announcement_hV4J8d"
+    "header"
   ]
 }
