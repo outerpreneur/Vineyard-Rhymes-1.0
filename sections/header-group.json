@@ -59,10 +59,17 @@
           "settings": {
             "title": "Announcement"
           }
+        },
+        "announcement_iekJTz": {
+          "type": "announcement",
+          "settings": {
+            "title": "Bye"
+          }
         }
       },
       "block_order": [
-        "announcement_7rJ4Yh"
+        "announcement_7rJ4Yh",
+        "announcement_iekJTz"
       ],
       "settings": {
         "title": "Announcement",
