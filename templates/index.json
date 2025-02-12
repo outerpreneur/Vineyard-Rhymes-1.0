@@ -12,6 +12,8 @@
     "image_banner_NtdeG3": {
       "type": "image-banner",
       "settings": {
+        "image_banner_desktop": "shopify://shop_images/012925_Sale_PB_Desktopext2.webp",
+        "image_banner_mobile": "shopify://shop_images/012925_Sale_PB_Mobileext.webp",
         "alt_text": ""
       }
     },
