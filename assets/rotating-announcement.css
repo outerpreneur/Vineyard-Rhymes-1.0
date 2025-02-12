@@ -1,10 +1,11 @@
 .rotating-announcement {
   width: 100%;
-  padding: 6px 20px;
+  padding: 6px 0;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 700;
   font-family: var(--body-font);
+  overflow: hidden;
 }
 
 .announcement {
