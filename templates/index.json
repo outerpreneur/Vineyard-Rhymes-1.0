@@ -84,11 +84,22 @@
       "settings": {
         "subtitle": "It’s only blue skies and comfortable styles in our latest batch of new arrivals."
       }
+    },
+    "featured_video_wd3BUq": {
+      "type": "featured-video",
+      "settings": {
+        "title": "Featured Video",
+        "description": "Watch our latest video to see how our products are made and how they can help you.",
+        "button_text": "Shop Now",
+        "video_youtube": "https://www.youtube.com/watch?v=-kgrc_EudVA",
+        "button_url": "shopify://collections/all"
+      }
     }
   },
   "order": [
     "image_banner_NtdeG3",
     "banner_slider_dUxNWt",
-    "featured_collection_list_cRYgTk"
+    "featured_collection_list_cRYgTk",
+    "featured_video_wd3BUq"
   ]
 }
