@@ -20,8 +20,5 @@
       "settings": {}
     }
   },
-  "order": [
-    "store-features",
-    "footer"
-  ]
+  "order": ["store-features", "footer"]
 }
