@@ -7,14 +7,14 @@
       {% for block in section.blocks %}
         <div class="swiper-slide">
           <a href="{{ block.settings.slider_link }}">
-            {% if block.settings.slider_image != blank %}
+            {% if block.settings.slider_image_desktop != blank or block.settings.slider_image_mobile != blank %}
               <img
-                src="{{ block.settings.slider_image | image_url: width: 1300 | image_tag }}"
-                srcset="{{ block.settings.slider_image | image_url: width: 1300 | image_tag }} 1024w, {{ block.settings.slider_image_mobile | image_url: width: 300 |  image_tag }} 768w"
-                sizes="(max-width: 768px) 768px, 1024px"
+                srcset="{{ block.settings.slider_image_mobile | image_url: width: 768 }} 768w, {{ block.settings.slider_image_desktop | image_url: width: 1300 }} 1300w"
+                sizes="(max-width: 768px) 768px, 1300px"
+                src="{{ block.settings.slider_image_desktop | image_url: width: 1300 }}"
+                alt="{{ block.settings.alt_text }}"
                 width=""
                 height=""
-                alt="{{ block.settings.alt_text }}"
               >
             {% else %}
               {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder' }}
@@ -103,7 +103,7 @@
       "settings": [
         {
           "type": "image_picker",
-          "id": "slider_image",
+          "id": "slider_image_desktop",
           "label": "Desktop Image",
           "info": "Recommended size: 1024x1024px"
         },
