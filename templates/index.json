@@ -90,7 +90,7 @@
         "title": "Featured Video",
         "description": "Watch our latest video to see how our products are made and how they can help you.",
         "button_text": "Shop Now",
-        "video_youtube": "",
+        "video_youtube": "https://www.youtube.com/watch?v=-kgrc_EudVA",
         "button_url": "shopify://collections/all"
       }
     },
