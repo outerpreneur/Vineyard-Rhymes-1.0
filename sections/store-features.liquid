@@ -1,0 +1,99 @@
+<section id={{ section.id }} class="shopify-section store-features">
+  <div class="container">
+    <div class="store-features-inner">
+      <div class="store-features-item">
+        <img src="https://cdn.shopify.com/s/files/1/0455/2176/4502/files/feature-1.png?v=1634710000" alt="Free Shipping" class="store-features-image">
+        <h3 class="store-features-title">Free Shipping</h3>
+        <p class="store-features-text">Free shipping on all orders over $50</p>
+      </div>
+      <div class="store-features-item">
+        <img src="https://cdn.shopify.com/s/files/1/0455/2176/4502/files/feature-2.png?v=1634710000" alt="24/7 Support" class="store-features-image">
+        <h3 class="store-features-title">24/7 Support</h3>
+        <p class="store-features-text">Customer support available 24/7</p>
+      </div>
+      <div class="store-features-item">
+        <img src="https://cdn.shopify.com/s/files/1/0455/2176/4502/files/feature-3.png?v=1634710000" alt="Secure Payment" class="store-features-image">
+        <h3 class="store-features-title">Secure Payment</h3>
+        <p class="store-features-text">Secure payment with 256-bit encryption</p>
+      </div>
+    </div>
+  </div>
+
+  {%  style  %}  
+    .store-features {
+      padding: 60px 0;
+      background-color: #f9f9f9;
+    }
+
+    .store-features-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .store-features-item {
+      flex: 1;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .store-features-image {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+
+    .store-features-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .store-features-text {
+      font-size: 16px;
+      color: #666;
+    }
+  {%  endstyle  %}
+
+{%  schema %}
+{
+  "name": "Store Features",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Store Features",
+      "category": "Store Features"
+    }
+  ],
+    "blocks": [
+        {
+        "type": "store-features",
+        "name": "Store Features",
+        "settings": [
+            {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+            },
+            {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+            },
+            {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+            }
+        ]
+        }
+    ],
+    "presets": [
+        {
+        "name": "Store Features"        }
+    ],
+    "enabled_on": {
+    "groups": ["footer"]
+  }
+}
+{%  endschema  %}
