@@ -51,108 +51,29 @@
         "logo_width": 200
       }
     },
-    "image_banner_7WgrwR": {
-      "type": "image-banner",
-      "settings": {
-        "image_banner_desktop": "shopify://shop_images/012925_Sale_PB_Desktopext2.jpg",
-        "image_banner_mobile": "shopify://shop_images/012925_Sale_PB_Mobileext.jpg",
-        "alt_text": ""
-      }
-    },
-    "banner_slider_fnpBte": {
-      "type": "banner-slider",
+    "rotating_announcement_hV4J8d": {
+      "type": "rotating-announcement",
       "blocks": {
-        "banner_Pz9zRJ": {
-          "type": "banner",
+        "announcement_7rJ4Yh": {
+          "type": "announcement",
           "settings": {
-            "slider_image": "shopify://shop_images/010825_H4_Desktop2.jpg",
-            "slider_image_mobile": "shopify://shop_images/010825_H4_Mobile.jpg",
-            "alt_text": "",
-            "slider_link": ""
-          }
-        },
-        "banner_a44dKY": {
-          "type": "banner",
-          "settings": {
-            "slider_image": "shopify://shop_images/010825_H3_Desktop.jpg",
-            "slider_image_mobile": "shopify://shop_images/010825_H3_Mobile.jpg",
-            "alt_text": "",
-            "slider_link": ""
+            "title": "Announcement"
           }
         }
       },
       "block_order": [
-        "banner_Pz9zRJ",
-        "banner_a44dKY"
-      ],
-      "settings": {}
-    },
-    "featured_collection_list_b93AQM": {
-      "type": "featured-collection-list",
-      "blocks": {
-        "collection_iyVUDr": {
-          "type": "collection",
-          "settings": {
-            "featured_collection": "men"
-          }
-        },
-        "collection_TWMHGn": {
-          "type": "collection",
-          "settings": {
-            "featured_collection": "woman"
-          }
-        },
-        "collection_Re8yXp": {
-          "type": "collection",
-          "settings": {
-            "featured_collection": "kids"
-          }
-        },
-        "collection_BaheAT": {
-          "type": "collection",
-          "settings": {
-            "featured_collection": "new"
-          }
-        }
-      },
-      "block_order": [
-        "collection_iyVUDr",
-        "collection_TWMHGn",
-        "collection_Re8yXp",
-        "collection_BaheAT"
+        "announcement_7rJ4Yh"
       ],
       "settings": {
-        "subtitle": "It’s only blue skies and comfortable styles in our latest batch of new arrivals."
-      }
-    },
-    "featured_video_Pd8FLa": {
-      "type": "featured-video",
-      "settings": {
-        "column_image": "shopify://shop_images/Vineyard-Vines-Logo.png",
-        "title": "Featured Video",
-        "description": "Watch our latest video to see how our products are made and how they can help you.",
-        "button_text": "Shop Now",
-        "video_youtube": "",
-        "button_url": "shopify://collections/all"
-      }
-    },
-    "featured_collection_slider_DQgrhW": {
-      "type": "featured-collection-slider",
-      "settings": {
-        "title": "Featured Collection",
-        "description": "Discover our latest collection of products.",
-        "button_text": "Shop Now",
-        "collection": "new"
+        "title": "Announcement",
+        "announcement_background_color": "#001a43",
+        "announcement_text_color": "#ffffff"
       }
     }
   },
   "order": [
     "rotating-announcement",
     "header",
-    "image_banner_7WgrwR",
-    "banner_slider_fnpBte",
-    "featured_collection_list_b93AQM",
-    "featured_video_Pd8FLa",
-    "featured_collection_slider_DQgrhW"
+    "rotating_announcement_hV4J8d"
   ]
 }
