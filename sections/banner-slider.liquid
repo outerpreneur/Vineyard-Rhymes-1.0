@@ -9,12 +9,11 @@
           <a href="{{ block.settings.slider_link }}">
             {% if block.settings.slider_image != blank %}
               <img
-                src="{{ block.settings.slider_image | image_url }}"
-                srcset="{{ block.settings.slider_image | image_url }} 1024w, {{ block.settings.slider_image_mobile | image_url }} 768w"
+                src="{{ block.settings.slider_image | image_url: width: 1300 | image_tag }}"
+                srcset="{{ block.settings.slider_image | image_url: width: 1300 | image_tag }} 1024w, {{ block.settings.slider_image_mobile | image_url: width: 300 |  image_tag }} 768w"
                 sizes="(max-width: 768px) 768px, 1024px"
-                width="300px"
+                width=""
                 height=""
-                loading="lazy"
                 alt="{{ block.settings.alt_text }}"
               >
             {% else %}
