@@ -8,6 +8,15 @@
  * ------------------------------------------------------------
  */
 {
-  "sections": {},
-  "order": []
+  "sections": {
+    "image_banner_NtdeG3": {
+      "type": "image-banner",
+      "settings": {
+        "alt_text": ""
+      }
+    }
+  },
+  "order": [
+    "image_banner_NtdeG3"
+  ]
 }
