@@ -94,12 +94,22 @@
         "video_youtube": "https://www.youtube.com/watch?v=-kgrc_EudVA",
         "button_url": "shopify://collections/all"
       }
+    },
+    "featured_collection_slider_6WeraM": {
+      "type": "featured-collection-slider",
+      "settings": {
+        "title": "Featured Collection",
+        "description": "Discover our latest collection of products.",
+        "button_text": "Shop Now",
+        "collection": ""
+      }
     }
   },
   "order": [
     "image_banner_NtdeG3",
     "banner_slider_dUxNWt",
     "featured_collection_list_cRYgTk",
-    "featured_video_wd3BUq"
+    "featured_video_wd3BUq",
+    "featured_collection_slider_6WeraM"
   ]
 }
