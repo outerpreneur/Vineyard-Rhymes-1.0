@@ -13,35 +13,60 @@
   "sections": {
     "store-features": {
       "type": "store-features",
-      "settings": {},
       "blocks": {
-        "block-0": {
+        "store_features_AwMNfr": {
           "type": "store-features",
           "settings": {
-            "title": "About us",
-            "text": "<p>Our mission is to provide the best products and service to our customers at the lowest prices possible. We take great pride in our company, our commitment to customer service and in the products we sell. Our online store is designed to provide you with a safe and secure environment to browse our product catalog.</p>"
+            "title": "Title",
+            "text": "Loren ipsum dolor sit amet"
           }
         },
-        "block-1": {
+        "store_features_cbEE6E": {
           "type": "store-features",
           "settings": {
-            "title": "Why buy from us",
-            "text": "<p>We are a fast growing company because we always put the customer first. A customer-centered shopping experience has always been our goal and we pride ourselves in our comprehensive policies that have put us in a realm above and beyond our competitors. Shop with us today and see the Vineyard Rhymes difference.</p>"
+            "title": "Title",
+            "text": "Loren ipsum dolor sit amet"
           }
         },
-        "block-2": {
+        "store_features_fGFU6k": {
           "type": "store-features",
           "settings": {
-            "title": "Contact us",
-            "text": "<p>Vineyard Rhymes<br>123 Main St<br>Anytown, USA 12345<br></p>"
+            "title": "Title",
+            "text": "Loren ipsum dolor sit amet"
           }
         }
+      },
+      "block_order": [
+        "store_features_AwMNfr",
+        "store_features_cbEE6E",
+        "store_features_fGFU6k"
+      ],
+      "settings": {
+        "background_color": "#f9f9f9",
+        "heading_text_color": "#333",
+        "text_color": "#666"
       }
     },
     "footer": {
       "type": "footer",
-      "settings": {}
+      "settings": {
+        "footer_title": "Footer",
+        "footer_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc.",
+        "footer_address": "1234 Street Name, City Name, United States",
+        "footer_phone": "+123-456-7890",
+        "footer_email": "hello@email.com",
+        "footer_newsletter_text": "Subscribe to our newsletter and get 10% off your first purchase",
+        "footer_newsletter_button": "Subscribe",
+        "footer_copy": "© shop. All Rights Reserved.",
+        "footer_terms": "Terms of Service",
+        "footer_privacy": "Privacy Policy",
+        "footer_terms_link": "#",
+        "footer_privacy_link": "#"
+      }
     }
   },
-  "order": ["store-features", "footer"]
+  "order": [
+    "store-features",
+    "footer"
+  ]
 }
