@@ -17,6 +17,7 @@
         "store_features_AwMNfr": {
           "type": "store-features",
           "settings": {
+            "image": "shopify://shop_images/Truck_009c1455-c5cc-4d75-bd4c-df200004ec2f.png",
             "title": "Title",
             "text": "Loren ipsum dolor sit amet"
           }
@@ -24,6 +25,7 @@
         "store_features_cbEE6E": {
           "type": "store-features",
           "settings": {
+            "image": "shopify://shop_images/Map_360a2e3d-9c0d-4399-959d-b8df6993abef.png",
             "title": "Title",
             "text": "Loren ipsum dolor sit amet"
           }
@@ -31,6 +33,7 @@
         "store_features_fGFU6k": {
           "type": "store-features",
           "settings": {
+            "image": "shopify://shop_images/Truck_009c1455-c5cc-4d75-bd4c-df200004ec2f.png",
             "title": "Title",
             "text": "Loren ipsum dolor sit amet"
           }
@@ -43,8 +46,8 @@
       ],
       "settings": {
         "background_color": "#f9f9f9",
-        "heading_text_color": "#333",
-        "text_color": "#666"
+        "heading_text_color": "#333333",
+        "text_color": "#666666"
       }
     },
     "footer": {
