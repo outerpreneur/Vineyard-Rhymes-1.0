@@ -1,0 +1,178 @@
+<variant-selects
+  id="variant-selects-{{ section.id }}"
+  class="no-js-hidden"
+  data-section="{{ section.id }}"
+  data-url="{{ product.url }}"
+  {{ block.shopify_attributes }}
+>
+  {% if product.options.size == 1 %}
+    {%- for option in product.options_with_values -%}
+      <div class="product-form__input product-form__input--dropdown">
+        <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
+          {% if option.name == 'SuperBra Maat' %}
+            {{ option.name | replace: ' ', '' | replace: 'Maat', 'maat' }}
+          {% else %}
+            {{ option.name }}
+          {% endif %}
+          {% if section.settings.sizing_page %}
+            <modal-opener
+              class="product-popup-modal__opener no-js-hidden"
+              data-modal="#PopupModal-sizing"
+            >
+              <button
+                id="ProductPopup-sizing"
+                class="product-popup-modal__button link"
+                type="button"
+                aria-haspopup="dialog"
+              >
+                {{ 'products.product.sizing' | t }}
+              </button>
+            </modal-opener>
+            {% assign sizingPage = section.settings.sizing_page %}
+            <a href="{{ sizingPage.url }}" class="product-popup-modal__button link no-js">
+              {{- 'products.product.sizing' | t -}}
+            </a>
+          {% endif %}
+        </label>
+        <div class="select">
+          <select
+            id="Option-{{ section.id }}-{{ forloop.index0 }}"
+            class="select__select"
+            name="options[{{ option.name | escape }}]"
+            form="product-form-{{ section.id }}"
+          >
+            <option
+              value=""
+              {% unless product.selected_variant %}
+                selected="selected"
+              {% endunless %}
+            >
+              {{ 'products.product.select_size' | t }}
+            </option>
+            {%- for variant in product.variants -%}
+              {% assign variant_title = variant.title | handleize %}
+              {% unless variant_title contains 'winkel' %}
+                {% if variant.available or product.metafields.stock.show_mail_me.value == true %}
+                  <option
+                    {% unless product.metafields.stock.show_mail_me.value == true %}
+                      {%- unless variant.available %}disabled{% endunless -%}
+                    {% endunless %}
+                    value="{{ variant.title | escape }}"
+                    {% if product.selected_variant and option.selected_value == variant.title %}
+                      selected="selected"
+                    {% endif %}
+                  >
+                    {{ variant.title }}
+                    {% if variant.available %}
+                      {% if variant.inventory_quantity > 0 %}
+                        ({{ 'products.product.2-5_days' | t }})
+                      {% else %}
+                        ({{ 'products.product.3-8_days' | t }})
+                      {% endif %}
+                    {% else %}
+                      {% if product.metafields.stock.show_mail_me.value == true -%}
+                        ({{ 'products.product.mail_me' | t }})
+                      {%- else -%}
+                        ({{ 'products.product.unavailable_online' | t }})
+                      {%- endif %}
+                    {% endif %}
+                  </option>
+                {% endif %}
+              {% endunless %}
+            {%- endfor -%}
+          </select>
+          {% render 'icon-caret' %}
+        </div>
+      </div>
+    {%- endfor -%}
+  {% else %}
+    {%- for option in product.options_with_values -%}
+      <div class="product-form__input product-form__input--dropdown {% if option.values.size == 1 %}hidden {% endif %}">
+        <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
+          {% if option.name == 'SuperBra Maat' %}
+            {{ option.name | replace: ' ', '' | replace: 'Maat', 'maat' }}
+          {% else %}
+            {{ option.name }}
+          {% endif %}
+          {% if section.settings.sizing_page %}
+            <modal-opener
+              class="product-popup-modal__opener no-js-hidden"
+              data-modal="#PopupModal-sizing"
+            >
+              <button
+                id="ProductPopup-sizing"
+                class="product-popup-modal__button link"
+                type="button"
+                aria-haspopup="dialog"
+              >
+                {{ 'products.product.sizing' | t }}
+              </button>
+            </modal-opener>
+            {% assign sizingPage = section.settings.sizing_page %}
+            <a href="{{ sizingPage.url }}" class="product-popup-modal__button link no-js">
+              {{- 'products.product.sizing' | t -}}
+            </a>
+          {% endif %}
+        </label>
+        <div class="select">
+          <select
+            id="Option-{{ section.id }}-{{ forloop.index0 }}"
+            class="select__select"
+            name="options[{{ option.name | escape }}]"
+            form="product-form-{{ section.id }}"
+          >
+            {% if forloop.index == 1 %}
+              <option
+                value=""
+                {% unless product.selected_variant %}
+                  selected="selected"
+                {% endunless %}
+              >
+                {{ 'products.product.select_size' | t }}
+              </option>
+            {% endif %}
+
+            {%- for value in option.values -%}
+              {% assign option_value = value | handleize %}
+              {{ option_value }}
+              {% unless option_value contains 'winkelbestelling' %}
+                <option
+                  value="{{ value | escape }}"
+                  {% if product.selected_variant and option.selected_value == value %}
+                    selected="selected"
+                  {% endif %}
+                >
+                  {{ value }}
+                  {% for variant in product.variants %}
+                    {% if variant.option1 == value %}
+                      {% if variant.available %}
+                        {% if variant.inventory_quantity > 0 %}
+                          ({{ 'products.product.2-5_days' | t }})
+                        {% else %}
+                          ({{ 'products.product.3-8_days' | t }})
+                        {% endif %}
+                      {% else %}
+                        {% if product.metafields.stock.show_mail_me.value == true -%}
+                          ({{ 'products.product.mail_me' | t }})
+                        {%- else -%}
+                          ({{ 'products.product.unavailable_online' | t }})
+                        {%- endif %}
+                      {% endif %}
+
+                      {% break %}
+                    {% endif %}
+                  {% endfor %}
+                </option>
+              {% endunless %}
+            {%- endfor -%}
+          </select>
+          {% render 'icon-caret' %}
+        </div>
+      </div>
+    {%- endfor -%}
+  {% endif %}
+
+  <script type="application/json">
+    {{ product.variants | json }}
+  </script>
+</variant-selects>

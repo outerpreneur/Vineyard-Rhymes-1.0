@@ -11,6 +11,14 @@
   width: 100%;
 }
 
+.grid-two-thirds {
+  grid-template-columns: 2fr 1fr;
+}
+
+.grid-half {
+  grid-template-columns: 1fr 1fr;
+}
+
 .padding-10 {
   padding: 10px;
 }
